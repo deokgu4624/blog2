@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Seong-Jin cho - Concert Pianist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Side Bar -->
+    <div class="sidebar" id="mySidebar">
+        <ul>
+            <button class="close" onclick="w3_close()">Close</button>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Concert</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Content -->
+    <button class="open" onclick="w3_open()">☰</button>
+    <div class="title">
+        … this latest Chopin Competition winner can stand proud next to the likes of such illustrious past winners as Pollini, Argerich and Zimerman”, Pianist, February 2016
+    </div>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+</html>

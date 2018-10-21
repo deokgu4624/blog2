@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/about.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <script src="about.js"></script>
+</head>
+<body>
+    <!-- Side Bar -->
+    <div class="sidebar" id="mySidebar">
+        <ul>
+            <button class="close" onclick="w3_close()">Close</button>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Concert</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <button class="open" onclick="w3_open()">☰</button>
+    <div class="title">
+            GENERAL MANAGER<br>
+            SOLEA MANAGEMENT<br>
+            Romain Blondel<br>
+            rb@solea-management.com<br>
+            Tour Essor 14, rue Scandicci 93500 Pantin (Paris)<br>
+            Tel +33-1-48-44-74-70<br>
+            www.solea-management.com<br>
+            NORTH / SOUTH AMERICA<br>
+            PRIMO ARTISTS<br>
+            Charlotte Lee<br>
+            charlotte@primoartists.com<br>
+            244 Fifth Avenue, Suite B222, New York, NY 10001<br>
+            Tel: +1-212-804-8301<br>
+            www.primoartists.com<br><br>
+            
+            JAPAN<br>
+            JAPAN ARTS<br>
+            Ryoko Yamada<br>
+            yamada@japanarts.co.jp<br>
+            Mariko Iitaka<br>
+            iitaka@japanarts.co.jp<br>
+            Kocho Building, 2-1-6 Shibuya, Shibuya-ku, Tokyo 150-8905,Japan<br>
+            Tel: +81-3-5774-3040<br>
+            www.japanarts.co.jp<br><br>
+            ITALY<br>
+            LORENZO BALDRIGHI ARTISTS MANAGEMENT<br>
+            Lorenzo Baldrighi<br>
+            i.baldrighi@baldrighi.com<br>
+            Piazza Gnecchi Ruscone, 2-223879 Verderio (LC) – Italia<br>
+            Tel +39.039.9281416<br>
+            Fax +39.039.9281424<br>
+            www.baldrighi.com<br><br>
+            SPAIN<br>
+            MEDEM MUSIC<br>
+            Victor Medem<br>
+            victor.medem@gmail.com<br>
+            Alicante, 3-B, 08017 Barcelona<br>
+            Tel +34 618 669 131<br>
+    </div>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+</html>
