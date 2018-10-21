@@ -8,6 +8,18 @@
 <link rel="stylesheet" href="./css/gallery.css"/>
 </head>
 <body>
+    <!-- Side Bar -->
+    <div class="sidebar" id="mySidebar">
+        <ul>
+            <button class="close" onclick="w3_close()">Close</button>
+            <li><a href="./index.html">Home</a><div class="line"></div></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Concert</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <button class="open" onclick="w3_open()">☰</button>
 <div id="wrap">
 <div id="grid">
     <!-- flex container -->
@@ -96,5 +108,13 @@
     </div>
 </div>
 </div>
+<script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 </body>
 </html>

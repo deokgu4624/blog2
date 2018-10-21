@@ -56,7 +56,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 fieldset{border:none}
 
 /* ---- LAYOUT ---- */
-body{padding-top:100px;font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;word-spacing:-1px;-webkit-text-size-adjust:none}
+body{font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;word-spacing:-1px;-webkit-text-size-adjust:none}
 
 #grid{
 	/* max-width:1280px; */
@@ -114,4 +114,22 @@ body{padding-top:100px;font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun G
 	.grid-item .figure{
 		width:200px
 	}
+}
+/* Side Bar */
+.sidebar{
+    position: fixed;
+    display: none;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sidebar ul li{
+    list-style-type: none;
+    font-family: 'Playfair Display', serif;
+    padding: 15px 10px;
+    font-size: 30px;
+}
+.open{
+    font-size: 30px;
 }
