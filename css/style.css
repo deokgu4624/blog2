@@ -159,7 +159,7 @@ body{
 .banner .banner-container::after{content:'';display:block;position:relative;clear:both}
 .banner .banner-container .banner-item{position:relative}
 .banner .banner-container .banner-item .image-area{position:absolute;width:100%}
-.banner .banner-container .banner-item .text-area{position:relative;width:100%;text-align:center;color:#333;mix-blend-mode:hard-light}
+.banner .banner-container .banner-item .text-area{position:relative;width:100%;text-align:center;mix-blend-mode:hard-light}
 .banner .banner-container .banner-item .text-area .title{padding-top:60px;text-transform:capitalize;font-size:40px;font-weight:400;line-height:50px}
 .banner .banner-container .banner-item .text-area .desc{padding-top:20px;font-size:20px;font-weight:500;line-height:26px}
 .banner .dot-nav{position:absolute;z-index:50;width:100%}
