@@ -54,7 +54,7 @@ body{
     font-weight: 400;
     width: 1000px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 6%;
     text-align: justify;
 }
 .name{
@@ -78,7 +78,11 @@ body{
     color: #484444;
 }
 .sidebar a:hover{
-    color: #eeecea;
+    animation: whitegray 2s;
+}
+@keyframes whitegray{
+    0%{color:#484444;}
+    100%{color:#eeecea;}
 }
 .sidebar ul{
     width: 1000px;

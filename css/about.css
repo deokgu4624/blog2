@@ -100,7 +100,11 @@ body{
     color: #484444;
 }
 .sidebar a:hover{
-    color: #eeecea;
+    animation: whitegray 2s;
+}
+@keyframes whitegray{
+    0%{color:#484444;}
+    100%{color:#eeecea;}
 }
 .sidebar ul{
     width: 1000px;
