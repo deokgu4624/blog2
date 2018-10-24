@@ -78,6 +78,16 @@ body{
     margin: 0 auto;
     margin-top: 300px;
 }
+.second img{
+    margin: 0 auto;
+}
+.second img{
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
 .menuline{
     background-color: black;
     width: 30px;
