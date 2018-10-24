@@ -51,7 +51,15 @@ body{
     width: 100%;
     height: 100%;
 	background-color: #1a1818;
-	z-index: 999999999;
+    z-index: 999999999;
+    animation: bgopacity 0.5s ease-in-out both;
+}
+@keyframes bgopacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.menuopen{
+    display: block;
 }
 .sidebar a{
     font-size: 60px;
@@ -136,7 +144,7 @@ body{
 .banner .banner-container::after{content:'';display:block;position:relative;clear:both}
 .banner .banner-container .banner-item{position:relative}
 .banner .banner-container .banner-item .text-area{position:relative;width:100%;text-align:center;mix-blend-mode:hard-light}
-.banner .banner-container .banner-item .text-area .title{text-transform:capitalize;font-family: 'Playfair Display', serif;color: black;font-size:50px;font-weight:400;line-height:50px}
+.banner .banner-container .banner-item .text-area .title{text-transform:capitalize;font-family: 'Playfair Display', serif;color: black;font-size:40px;font-weight:400;line-height:50px}
 .banner .banner-container .banner-item .text-area .desc{padding-top:20px;font-size:20px;font-weight:500;line-height:26px;font-family: 'Roboto', sans-serif;font-weight: 300}
 .banner .dot-nav{position:absolute;z-index:50;width:100%}
 .banner .dot-nav ul{display:block;text-align:center}

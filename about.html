@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/about.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-    <script src="about.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
 </head>
 <body>
     <!-- Side Bar -->
     <div class="sidebar" id="mySidebar">
         <ul>
-            <button class="close" onclick="w3_close()">×</button>
+            <button class="close">×</button>
             <li><a href="./index.html">Home</a><div class="line"></div></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./concerts.html">Concerts</a></li>
@@ -22,7 +22,7 @@
         </ul>
     </div>
 
-    <button class="open" onclick="w3_open()">
+    <button class="open">
         <div class="menuline"></div>
         <div class="menuline"></div>
         <div class="menuline"></div>
@@ -75,12 +75,18 @@ Born in 1994 in Seoul, Seong-Jin Cho started learning the piano at 6 and gave hi
         </ul>
     </div>
     <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-        }
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
+        (function($){
+    $(document).ready(function(){
+        $('.open').click(function(){
+            $('.sidebar').addClass('menuopen')
+            console.log('open');
+        })
+        $('.close').click(function(){
+            $('.sidebar').removeClass('menuopen')
+            console.log('close');
+        })
+    });
+})(jQuery);
     </script>
 </body>
 </html>

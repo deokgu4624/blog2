@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>CSS Flexbox</title>
+<title>Gallery</title>
 <link rel="stylesheet" href="./css/gallery.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
 </head>
 <body>
     <!-- Side Bar -->
     <div class="sidebar" id="mySidebar">
         <ul>
-            <button class="close" onclick="w3_close()">×</button>
+            <button class="close">×</button>
             <li><a href="./index.html">Home</a><div class="line"></div></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./concerts.html">Concerts</a></li>
@@ -20,7 +21,7 @@
         </ul>
     </div>
 
-    <button class="open" onclick="w3_open()">
+    <button class="open">
         <div class="menuline"></div>
         <div class="menuline"></div>
         <div class="menuline"></div>
@@ -116,12 +117,18 @@
         </ul>
     </div>
 <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-        }
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
+        (function($){
+    $(document).ready(function(){
+        $('.open').click(function(){
+            $('.sidebar').addClass('menuopen')
+            console.log('open');
+        })
+        $('.close').click(function(){
+            $('.sidebar').removeClass('menuopen')
+            console.log('close');
+        })
+    });
+})(jQuery);
     </script>
 </body>
 </html>

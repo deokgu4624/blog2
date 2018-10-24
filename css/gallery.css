@@ -1,17 +1,3 @@
-@font-face {
-	font-family:'SF Pro Display';
-	font-style:normal;
-	font-weight:600;
-	src:local('☺︎'), url("../fonts/sf-pro-display_semibold.woff2") format("woff2");
-	/* (C) 2015 Apple Inc. All rights reserved.*/
-}
-@font-face {
-	font-family:'SF Pro Display';
-	font-style:normal;
-	font-weight:400;
-	src:local('☺︎'), url("../fonts/sf-pro-display_regular.woff2") format("woff2");
-	/* (C) 2015 Apple Inc. All rights reserved.*/
-}
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
@@ -43,7 +29,7 @@ input[type=search]::-webkit-search-cancel-button,input[type='search']::-webkit-s
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 a,button{-webkit-tap-highlight-color:transparent}
 button{border:0 none;background-color:transparent;cursor:pointer}
-textarea{overflow:auto;vertical-align:top;resize:none;font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif}
+textarea{overflow:auto;vertical-align:top;resize:none;}
 table{border-collapse:collapse;border-spacing:0}
 html,button,input,select,textarea,a{color:#212121}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0)}
@@ -52,7 +38,7 @@ a{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout
 a:hover{color:#212121}
 a:hover,a:link,a:visited,a:active{text-decoration:none}
 a.select{cursor:default !important;-webkit-transition:none !important;-moz-transition:none !important;-ms-transition:none !important;-o-transition:none !important;transition:none !important}
-input{-webkit-appearance:none;border-radius:0;font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif}
+input{-webkit-appearance:none;border-radius:0;}
 input[type=number]{-moz-appearance:textfield}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 fieldset{border:none}
@@ -162,7 +148,15 @@ body{
     width: 100%;
     height: 100%;
 	background-color: #1a1818;
-	z-index: 999999999;
+    z-index: 999999999;
+    animation: bgopacity 0.5s ease-in-out both;
+}
+@keyframes bgopacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.menuopen{
+    display: block;
 }
 .sidebar a{
     font-size: 60px;
