@@ -73,10 +73,10 @@ body{
     margin: 0 auto;
 }
 .profile img{
-    width: 300px;
     display: block;
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 .second img{
     margin: 0 auto;
