@@ -42,6 +42,7 @@ fieldset{border:none}
 
 /* ---- LAYOUT ---- */
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 /* Contents */
 body{
     background-color: #eeecea;
@@ -121,4 +122,22 @@ body{
 }
 .open{
     font-size: 30px;
+}
+
+/* footer */
+.footer{
+	width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.footer ul{
+	width: 1000px;
+	text-align: center;
+}
+.footer li{
+	display: inline;
+	margin: 0 10px;
 }

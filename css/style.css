@@ -142,6 +142,7 @@ body{
     margin-left: 10px;
 }
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 /* Contents */
 .title{
     font-family: 'Playfair Display', serif;
@@ -157,6 +158,17 @@ body{
     height: 200px;
     margin: 50px auto;
 }
+.mainimage{
+    margin: 0 auto;
+}
+.mainimage img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+.mainimage img{
+    margin: 0 auto;
+}
 
 .blind{display:none;visibility:hidden}
 .banner{position:relative;width:1200px;height:500px;margin: 0 auto;}
@@ -165,8 +177,8 @@ body{
 .banner .banner-container::after{content:'';display:block;position:relative;clear:both}
 .banner .banner-container .banner-item{position:relative}
 .banner .banner-container .banner-item .text-area{position:relative;width:100%;text-align:center;mix-blend-mode:hard-light}
-.banner .banner-container .banner-item .text-area .title{margin-top: 40px; text-transform:capitalize;font-size:40px;font-weight:400;line-height:50px}
-.banner .banner-container .banner-item .text-area .desc{padding-top:20px;font-size:20px;font-weight:500;line-height:26px}
+.banner .banner-container .banner-item .text-area .title{margin-top: 40px; text-transform:capitalize;font-size:30px;font-weight:400;line-height:50px}
+.banner .banner-container .banner-item .text-area .desc{padding-top:20px;font-size:20px;font-weight:500;line-height:26px;font-family: 'Roboto', sans-serif;font-weight: 300}
 .banner .dot-nav{position:absolute;z-index:50;width:100%}
 .banner .dot-nav ul{display:block;text-align:center}
 .banner .dot-nav li{display:inline-block;padding-right:7px;padding-left:7px}
@@ -181,13 +193,12 @@ body{
 .banner .paddle-nav button.disabled{display:none}
 .banner .paddle-nav button.prev{}
 .banner .paddle-nav button.next{}
-.banner .paddle-nav button.prev::after{content:'<';margin-left:-0.044em}
-.banner .paddle-nav button.next::after{content:'>';margin-right:-0.044em}
+
 
 .list{
     width: 1000px;
 	margin: 0 auto;
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 	font-family: 'Playfair Display', serif;
 	margin-top: 200px;
@@ -199,7 +210,11 @@ body{
 /* footer */
 .footer{
 	width: 1000px;
-	margin: 0 auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 .footer ul{
 	width: 1000px;
