@@ -46,6 +46,14 @@ fieldset{border:none}
 body{
     background-color: #eeecea;
 }
+.title{
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 300px;
+    text-align: center;
+}
 .text{
     font-family: 'Playfair Display', serif;
     font-size: 20px;
@@ -56,8 +64,10 @@ body{
 .verticalline{
     background-color: black;
     width: 1px;
-    height: 200px;
+    height: 150px;
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .profile{
     margin: 0 auto;
@@ -66,7 +76,7 @@ body{
     width: 300px;
     display: block;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 300px;
 }
 .menuline{
     background-color: black;
