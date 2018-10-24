@@ -42,19 +42,52 @@ fieldset{border:none}
 
 /* ---- LAYOUT ---- */
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+
+/* Contents */
+body{
+    background-color: #eeecea;
+}
 .title{
     font-family: 'Playfair Display', serif;
-    font-size: 80px;
-    margin-left:25%;
+    font-weight: 400;
+    font-size: 40px;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: justify;
+}
+.name{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.menuline{
+    background-color: black;
+    width: 30px;
+    height: 1px;
+    margin: 10px auto;
+    margin-left: 10px;
 }
 /* Side Bar */
 .sidebar{
     position: fixed;
     display: none;
-    width: 300px;
+    width: 100%;
     height: 100%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #1a1818;
+}
+.sidebar a{
+    font-size: 30px;
+    color: #484444;
+}
+.sidebar a:hover{
+    color: #eeecea;
+}
+.sidebar ul{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 200px;
 }
 .sidebar ul li{
     list-style-type: none;

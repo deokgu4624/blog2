@@ -42,20 +42,41 @@ fieldset{border:none}
 
 /* ---- LAYOUT ---- */
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+body{
+    background-color: #eeecea;
+}
 .text{
     font-family: 'Playfair Display', serif;
     font-size: 25px;
-    width: 800px;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.verticalline{
+    background-color: black;
+    width: 1px;
+    height: 200px;
     margin: 0 auto;
 }
 /* Side Bar */
 .sidebar{
     position: fixed;
     display: none;
-    width: 300px;
+    width: 100%;
     height: 100%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #1a1818;
+}
+.sidebar a{
+    font-size: 30px;
+    color: #484444;
+}
+.sidebar a:hover{
+    color: #eeecea;
+}
+.sidebar ul{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 200px;
 }
 .sidebar ul li{
     list-style-type: none;
@@ -65,18 +86,4 @@ fieldset{border:none}
 }
 .open{
     font-size: 30px;
-}
-.line{
-    background-color: black;
-    width: 1px;
-    height: 200px;
-    margin: 0 auto;
-}
-.profile{
-    margin: 0 auto;
-}
-.profile img{
-    width: 300px;
-    display: block;
-    margin: 0 auto;
 }
