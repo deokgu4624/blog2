@@ -61,21 +61,12 @@ body{
     margin: 0 auto;
     text-align: justify;
 }
-.verticalline{
-    background-color: black;
-    width: 1px;
-    height: 150px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 .profile{
     margin: 0 auto;
 }
 .profile img{
     display: block;
     margin: 0 auto;
-    margin-top: 200px;
     margin-bottom: 200px;
 }
 .second img{
@@ -94,6 +85,12 @@ body{
     height: 1px;
     margin: 10px auto;
     margin-left: 10px;
+}
+.verticalline{
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin: 50px auto;
 }
 
 /* Side Bar */

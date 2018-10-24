@@ -151,16 +151,21 @@ body{
     margin-top: 300px;
     text-align: center;
 }
+.verticalline{
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin: 50px auto;
+}
 
 .blind{display:none;visibility:hidden}
-.banner{position:relative;width:1000px;height:768px;margin: 0 auto;}
+.banner{position:relative;width:1200px;height:500px;margin: 0 auto;}
 .banner .banner-wrap{position:relative}
 .banner .banner-container{position:relative}
 .banner .banner-container::after{content:'';display:block;position:relative;clear:both}
 .banner .banner-container .banner-item{position:relative}
-.banner .banner-container .banner-item .image-area{position:absolute;width:100%}
 .banner .banner-container .banner-item .text-area{position:relative;width:100%;text-align:center;mix-blend-mode:hard-light}
-.banner .banner-container .banner-item .text-area .title{padding-top:60px;text-transform:capitalize;font-size:40px;font-weight:400;line-height:50px}
+.banner .banner-container .banner-item .text-area .title{margin-top: 40px; text-transform:capitalize;font-size:40px;font-weight:400;line-height:50px}
 .banner .banner-container .banner-item .text-area .desc{padding-top:20px;font-size:20px;font-weight:500;line-height:26px}
 .banner .dot-nav{position:absolute;z-index:50;width:100%}
 .banner .dot-nav ul{display:block;text-align:center}
@@ -168,7 +173,7 @@ body{
 .banner .dot-nav li span{display:block;width:8px;height:8px;background-color:#888;border-radius:50%;line-height:8px;cursor:pointer;user-select:none;-webkit-transition:background-color 120ms ease-in-out}
 .banner .dot-nav li span:hover{background-color:#666}
 .banner .dot-nav li span.selected{background-color:#fff;cursor:default}
-.banner .paddle-nav button{position:absolute;z-index:50;top:50%;width:52px;height:52px;margin-top:-26px;border-radius:52px;font-size:53px;font-weight:400;line-height:52px;background-color:rgba(214,214,214,0.25);color:rgba(136,136,136,0.8);-webkit-transition:background-color 180ms ease-in-out}
+.banner .paddle-nav button{position:absolute;z-index:50;top:40%;width:52px;height:52px;margin-top:-26px;border-radius:52px;font-size:53px;font-weight:400;line-height:52px;background-color:rgba(214,214,214,0.25);color:rgba(136,136,136,0.8);-webkit-transition:background-color 180ms ease-in-out}
 .banner .paddle-nav button:hover{background-color:rgba(214,214,214,0.75)}
 /* prev -   */
 /* next -   */
@@ -176,19 +181,33 @@ body{
 .banner .paddle-nav button.disabled{display:none}
 .banner .paddle-nav button.prev{}
 .banner .paddle-nav button.next{}
-.banner .paddle-nav button.prev::after{content:'';margin-left:-0.044em}
-.banner .paddle-nav button.next::after{content:'';margin-right:-0.044em}
+.banner .paddle-nav button.prev::after{content:'<';margin-left:-0.044em}
+.banner .paddle-nav button.next::after{content:'>';margin-right:-0.044em}
 
 .list{
     width: 1000px;
 	margin: 0 auto;
-	font-size: 20px;
+	font-size: 25px;
 	text-align: center;
 	font-family: 'Playfair Display', serif;
 	margin-top: 200px;
 }
 .list li{
 	margin-bottom: 20px;
+}
+
+/* footer */
+.footer{
+	width: 1000px;
+	margin: 0 auto;
+}
+.footer ul{
+	width: 1000px;
+	text-align: center;
+}
+.footer li{
+	display: inline;
+	margin: 0 10px;
 }
 
 
