@@ -56,6 +56,12 @@ body{
     margin: 0 auto;
     margin-top: 140px;
     text-align: justify;
+    animation: opacity 1.5s ease-in-out both;
+
+}
+@keyframes opacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 .name{
     width: 1000px;
@@ -65,6 +71,7 @@ body{
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    animation: opacity 1.5s 0.5s ease-in-out both; 
 }
 
 /* Side Bar */
@@ -81,7 +88,7 @@ body{
     color: #484444;
 }
 .sidebar a:hover{
-    animation: whitegray 2s;
+    animation: whitegray 1s both;
 }
 .close{
     font-size: 40px;
@@ -90,7 +97,7 @@ body{
     color: #484444;
 }
 .close:hover{
-    animation: whitegray 2s;
+    animation: whitegray 1s both;
 }
 @keyframes whitegray{
     0%{color:#484444;}

@@ -143,11 +143,17 @@ body{
     margin-top: 300px;
     text-align: center;
 }
+.form{
+    height: 240px;
+}
 .verticalline{
     background-color: black;
-    width: 1px;
-    height: 200px;
+    animation: verticalline 1s ease-in-out both;
     margin: 50px auto;
+}
+@keyframes verticalline{
+    0%{width:1px; height: 0px}
+    100%{width:1px; height: 200px}
 }
 /* Side Bar */
 .sidebar{
@@ -163,7 +169,7 @@ body{
     color: #484444;
 }
 .sidebar a:hover{
-    animation: whitegray 2s;
+    animation: whitegray 1s both;
 }
 .close{
     font-size: 40px;
@@ -172,7 +178,7 @@ body{
     color: #484444;
 }
 .close:hover{
-    animation: whitegray 2s;
+    animation: whitegray 1s both;
 }
 @keyframes whitegray{
     0%{color:#484444;}
