@@ -102,6 +102,15 @@ body{
 .sidebar a:hover{
     animation: whitegray 2s;
 }
+.close{
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #484444;
+}
+.close:hover{
+    animation: whitegray 2s;
+}
 @keyframes whitegray{
     0%{color:#484444;}
     100%{color:#eeecea;}
