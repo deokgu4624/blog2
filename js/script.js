@@ -12,6 +12,8 @@ $(document).ready(function() {
             this.reset();
             this.addEvent();
             this.resetInit();
+            this.textAnimation();
+ 
         },
         layout : function() {
             this.$win = $(window);
@@ -76,6 +78,7 @@ $(document).ready(function() {
                 if(_this._cuScroll >= startLimit && _this._cuScroll < endLimit) {
                     _this.$gnEl.removeClass('active');
                     _this.$gnEl.eq(index).addClass('active');
+                    _this.Play();
                 }
             });
         },
@@ -104,7 +107,21 @@ $(document).ready(function() {
                     }
                 }
             }
-        }
+        },
+        Play : function() {
+            var $line = $('.line');
+            TweenMax.killTweensOf($line);
+            //$box1 에 부여된 애니메이션 속성을 삭제.
+            $line.empty();
+            TweenMax.set($line, {css: {height:0, autoAlpha: 0}});
+            TweenMax.to($line, 0.65, {css: {height:150, autoAlpha: 1}, ease: Back.easeInOut});
+        },
+        // textAnimation : function() {
+        //     var $text = $(".split-1")
+        //     TweenMax.killTweensOf($text);
+        //     TweenMax.set($text, {css: {x:100, autoAlpha: 0}});
+        //     TweenMax.to($text, 0.65, {css: {x:150, autoAlpha: 1}, ease: Back.easeInOut});
+        // }
     };
     Menu.init();
 });
