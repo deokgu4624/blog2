@@ -54,7 +54,7 @@ fieldset{border:none}
 #global-nav li a::after{content:'';display:block;position:absolute;bottom:0;left:0;width:100%;height:0;background-color:#222;-webkit-transition:height 120ms ease-in-out;-moz-transition:height 120ms ease-in-out;-ms-transition:height 120ms ease-in-out;-o-transition:height 120ms ease-in-out;transition:height 120ms ease-in-out}
 #global-nav li a:hover,#global-nav li a.active{color:#222}
 #global-nav li a.active::after{height:5px}
-.content{position:relative;padding:60px 60px 0;font-family: 'Playfair Display', serif;text-align:justify;}
+.content{position:relative;width:1030px;margin:0 auto;padding:60px 60px 0;font-family: 'Playfair Display', serif;text-align:justify;}
 .content .section{height:calc(100vh - 180px);padding-top:60px}
 .content .section:last-child{padding-bottom:60px}
 .content .section .area{width:100%;height:100%;padding:50px;background-color:#eeecea;border:0px solid #222;color:#1a1818;font-size:40px;font-weight:400;line-height:30px;box-sizing:border-box}
@@ -62,10 +62,11 @@ fieldset{border:none}
 #section-1 .area .name{font-family: 'Tangerine', cursive;font-size: 40px;font-weight: 300; text-align: center;}
 #section-2 .area{font-size: 20px; line-height:40px;}
 .content #section-1{height:640px;}
-.content #section-2{height:2000px;}
-.content #section-3{height:1000px;}
+.content #section-2{height:2200px;}
+.content #section-3{height:1100px;}
 .content #section-4{height:3000px;}
 .content .section .area .title{font-size: 60px;text-align: center;margin-bottom:50px;}
+.line{background-color: black; width: 1px; height: 150px; margin: 0 auto;}
 
 #grid{
 	/* max-width:1280px; */
@@ -96,7 +97,8 @@ fieldset{border:none}
 .grid-item .figure img{
 	display:inline-block;
 	width:100%;
-	vertical-align:top
+	vertical-align:top;
+	border-radius:6px;
 }
 .grid-item .figure img:hover{
 	display:inline-block;
