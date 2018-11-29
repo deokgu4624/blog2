@@ -12,8 +12,8 @@ $(document).ready(function() {
             this.reset();
             this.addEvent();
             this.resetInit();
-            this.textAnimation();
- 
+            this.lineScrollEvents();
+            this.textScrollEvents();
         },
         layout : function() {
             this.$win = $(window);
@@ -62,7 +62,7 @@ $(document).ready(function() {
             if(!_this._isClick) {
                 _this.scrollMenu();
             }
-            _this.scrollMenuVisible();
+            //_this.scrollMenuVisible();
             _this._exScroll = _this._cuScroll;
         },
         scrollMenu : function() {
@@ -78,7 +78,6 @@ $(document).ready(function() {
                 if(_this._cuScroll >= startLimit && _this._cuScroll < endLimit) {
                     _this.$gnEl.removeClass('active');
                     _this.$gnEl.eq(index).addClass('active');
-                    _this.Play();
                 }
             });
         },
@@ -108,20 +107,54 @@ $(document).ready(function() {
                 }
             }
         },
-        Play : function() {
-            var $line = $('.line');
-            TweenMax.killTweensOf($line);
-            //$box1 에 부여된 애니메이션 속성을 삭제.
-            $line.empty();
-            TweenMax.set($line, {css: {height:0, autoAlpha: 0}});
-            TweenMax.to($line, 0.65, {css: {height:150, autoAlpha: 1}, ease: Back.easeInOut});
+        lineScrollEvents : function() {
+            var toggle = true;
+            var toggle2 = true;
+            var toggle3 = true;
+            var $line1 = $('.line-1');
+            var $line2 = $('.line-2');
+            var $line3 = $('.line-3');
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                console.log(height);
+                if(height>600 && toggle)
+                {
+                    TweenMax.killTweensOf($line1);
+                    $line1.empty();
+                    TweenMax.set($line1, {css: {height:0, autoAlpha: 0}});
+                    TweenMax.to($line1, 1, {css: {height:150, autoAlpha: 1}, ease: Power4.easeOut});
+                    toggle = false;
+                }
+                if(height>3000 && toggle2)
+                {
+                    TweenMax.killTweensOf($line2);
+                    $line2.empty();
+                    TweenMax.set($line2, {css: {height:0, autoAlpha: 0}});
+                    TweenMax.to($line2, 1, {css: {height:150, autoAlpha: 1}, ease: Power4.easeOut});
+                    toggle2 = false;
+                }
+                if(height>4000 && toggle3)
+                {
+                    TweenMax.killTweensOf($line3);
+                    $line2.empty();
+                    TweenMax.set($line3, {css: {height:0, autoAlpha: 0}});
+                    TweenMax.to($line3, 1, {css: {height:150, autoAlpha: 1}, ease: Power4.easeOut});
+                    toggle3 = false;
+                }
+            });
         },
-        // textAnimation : function() {
-        //     var $text = $(".split-1")
-        //     TweenMax.killTweensOf($text);
-        //     TweenMax.set($text, {css: {x:100, autoAlpha: 0}});
-        //     TweenMax.to($text, 0.65, {css: {x:150, autoAlpha: 1}, ease: Back.easeInOut});
-        // }
+
+        textScrollEvents : function() {
+
+
+            var $word = $('.word-1').find('span');
+            TweenMax.set($word, {css: {y:100,autoAlpha: 0}});
+            setTimeout(function(){
+                TweenMax.staggerTo($word, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+            }, 1000);
+            
+            //TweenMax.to($word, 2, {css: {y:0,autoAlpha: 1}, ease: Back.easeInOut, delay:2});
+        }
     };
     Menu.init();
 });
