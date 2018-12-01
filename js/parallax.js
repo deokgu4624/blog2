@@ -46,7 +46,7 @@
                     startLimit = elT - _this._winH;
                     endLimit = elT + _this._winH * 2;
                     if(scrollTop >= startLimit && scrollTop < endLimit){
-                        var $img = $el.find('img'), imgY = (elT - scrollTop) / 6 * -1;
+                        var $img = $el.find('.parralax-img'), imgY = (elT - scrollTop) / 10 * -1;
                         $img.css({transform : 'translateY(' + imgY + 'px)'});
                     }
                 });
