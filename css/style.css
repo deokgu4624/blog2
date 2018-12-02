@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
 /* ---- RESET ---- */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,button,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time,menu,select,legend{margin:0;padding:0}
@@ -61,11 +62,12 @@ body{background-color: #eeecea;}
 .content .section .area{width:100%;height:100%;padding:50px;border:0px solid #222;color:#1a1818;font-size:40px;font-weight:400;line-height:30px;box-sizing:border-box}
 #section-1 .area{font-size: 60px;line-height:90px;}
 #section-1 .area span{display:inline-block}
-#section-1 .area .name{font-family: 'Tangerine', cursive;font-size: 40px;font-weight: 300; text-align: center; margin-top: 180px;}
+#section-1 .area .name{font-family: 'Pinyon Script', cursive;font-size: 40px;font-weight: 300; text-align: center; margin-top: 180px;}
 #section-2 .area{font-size: 20px; line-height:40px;}
+#section-3 .area{font-size: 20px; line-height:40px;}
 .content #section-1{height:820px;}
 .content #section-2{height:2200px;}
-.content #section-3{height:1100px;}
+.content #section-3{height:2400px;}
 .content #section-4{height:3100px;}
 .content .section .area .title{font-size: 60px;text-align: center;margin-bottom:50px;}
 .linesection{width:100%; height: 150px; margin: 0 auto;}
@@ -78,7 +80,15 @@ body{background-color: #eeecea;}
 #section-2 .parralax-img:nth-of-type(1){position:absolute; width: 800px; z-index: -1; top: 1200px; right: -200px}
 #section-2 .parralax-img:nth-of-type(2){position:absolute; width: 1000px; z-index: -1;top: 1800px; left: -400px}
 #section-2 .parralax-img:nth-of-type(3){position:absolute; width: 800px; z-index: -1;top: 2400px; right: -400px}
+#section-3 .area-1 .parralax-img{position:absolute; width: 500px; z-index: -1;}
+#section-3 .area-2 .parralax-img{position:relative; width: 500px;top:400px; left:428px;z-index: -1;}
 .word{}
+.area-1 .subtitle{position: relative; top: 100px; left: 400px; font-size: 60px; font-family: 'Pinyon Script', cursive;}
+.area-1 .subsubtitle{position: relative; top: 100px; left: 400px; width: 520px;}
+.area-1 .text-area{position: relative; top: 410px;}
+.area-2 .subtitle{position: relative; top: 100px; font-size: 60px;font-family: 'Pinyon Script', cursive;}
+.area-2 .subsubtitle{position: relative; top: 100px; width: 520px;}
+.area-2 .text-area{position: relative; top: 420px;}
 
 #grid{
 	/* max-width:1280px; */
@@ -110,7 +120,6 @@ body{background-color: #eeecea;}
 	display:inline-block;
 	width:100%;
 	vertical-align:top;
-	border-radius:6px;
 }
 .grid-item .figure img:hover{
 	display:inline-block;
@@ -133,33 +142,3 @@ body{background-color: #eeecea;}
 	line-height:18px
 }
 
-
-.blind{display:none;visibility:hidden}
-/* body{width:1000px;margin:0 auto;padding-top:100px} */
-.banner{overflow:hidden;position:relative;width:100%;height:768px}
-.banner .banner-wrap{position:relative;height:100%}
-.banner .banner-container{position:relative;height:100%}
-.banner .banner-container::after{content:'';display:block;position:relative;clear:both}
-.banner .banner-container .banner-item{position:relative;float:left;height:100%}
-.banner .banner-container .banner-item .image-area{
-	
-	overflow:hidden;
-	
-	position:absolute;width:100%;height:100%}
-.banner .banner-container .banner-item .image-area img{width:100%;height:100%;
-	/* 이미지 리사이즈 1번째 방법 */
-	/* 이미지 전체 영역을 지정하고 object-fit 의 속성값을 cover 로 지정 */
-	/* object-fit:cover */}
-.banner .banner-container .banner-item .text-area{position:relative;width:100%;text-align:center;color:#333;mix-blend-mode:hard-light}
-.banner .banner-container .banner-item .text-area .title{padding-top:60px;text-transform:capitalize;font-size:40px;font-weight:700;line-height:50px}
-.banner .banner-container .banner-item .text-area .desc{padding-top:20px;font-size:20px;font-weight:500;line-height:26px}
-.banner .dot-nav{position:absolute;z-index:50;bottom:20px;width:100%}
-.banner .dot-nav ul{display:block;text-align:center}
-.banner .dot-nav li{display:inline-block;padding-right:6px;padding-left:6px}
-.banner .dot-nav li span{display:block;width:8px;height:8px;background-color:#888;border-radius:50%;line-height:8px;cursor:pointer;user-select:none;-webkit-transition:background-color 120ms ease-in-out}
-.banner .dot-nav li span:hover{background-color:#666}
-.banner .dot-nav li span.selected{background-color:#fff;cursor:default}
-.banner .dot-nav li span{border-radius:4px;-webkit-transition:width 200ms ease-in-out, background-color 120ms ease-in-out}
-.banner .dot-nav li span.selected{width:24px}
-.banner .paddle-nav button{position:absolute;z-index:50;top:50%;width:52px;height:52px;margin-top:-26px;border-radius:52px;font-size:53px;font-weight:400;line-height:52px;background-color:rgba(214,214,214,0.25);color:rgba(136,136,136,0.8);-webkit-transition:background-color 180ms ease-in-out}
-.banner .paddle-nav button:hover{background-color:rgba(214,214,214,0.75)}
