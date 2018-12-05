@@ -344,13 +344,13 @@ $(document).ready(function() {
             var $vertical2 = $('.vertical-2');
             setTimeout(function(){
                 TweenMax.set($horizontal, {css: {width:0,autoAlpha:1}});
-                TweenMax.to($horizontal, 3,{css: {width:1000,autoAlpha:0}, ease: Power4.easeOut});
+                TweenMax.to($horizontal, 3,{css: {width:1030,autoAlpha:0}, ease: Power4.easeOut});
                 TweenMax.set($horizontal2, {css: {width:0,autoAlpha:1}});
-                TweenMax.to($horizontal2, 3,{css: {width:1000,autoAlpha:0}, ease: Power4.easeOut});
+                TweenMax.to($horizontal2, 3,{css: {width:1030,autoAlpha:0}, ease: Power4.easeOut});
                 TweenMax.set($vertical, {css: {height:0,autoAlpha:1}});
-                TweenMax.to($vertical, 3,{css: {height:500,autoAlpha:0}, ease: Power4.easeOut});
-                TweenMax.set($vertical2, {css: {height:0,autoAlpha:1}});
-                TweenMax.to($vertical2, 3,{css: {height:500,autoAlpha:0}, ease: Power4.easeOut});
+                TweenMax.to($vertical, 3,{css: {height:501,autoAlpha:0}, ease: Power4.easeOut});
+                TweenMax.set($vertical2, {css: {height:0,autoAlpha:1,}});
+                TweenMax.to($vertical2, 3,{css: {height:501,autoAlpha:0}, ease: Power4.easeOut});
             }, 1000);
         }
     };

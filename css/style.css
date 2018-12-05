@@ -165,7 +165,8 @@ body{background-color: #eeecea;}
 .sns li{
 	display: inline;
 }
-.horizontal:nth-child(1){position: absolute;width: 0;top:150px; left:100px;height: 1px;background-color: black;}
-.horizontal:nth-child(2){position: absolute;width: 0;top:650px;right:105px;height: 1px;background-color: black;}
-.vertical-1{position: absolute;width: 1px;bottom:270px;left:100px;height: 0;background-color: black;margin: 8px auto;}
-.vertical-2{position: absolute;width: 1px;top:143px;right:105px;height: 0;background-color: black;margin: 8px auto;}
+.horizontal:nth-child(1){position: absolute;top: 150px; width:0px;height: 1px;background-color: black;}
+.horizontal:nth-child(2){position: absolute; top:650px;right:59px;width:0px;height: 1px;background-color: black;}
+.vertical-1{position: absolute;bottom: 8629px;width: 1px; height: 0px;background-color: black;}
+.vertical-2{position: absolute;top:150px;right:59px;width: 1px; height: 0px;background-color: black;}
+
