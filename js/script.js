@@ -16,6 +16,7 @@ $(document).ready(function() {
             this.textScrollEvents();
             this.imageScrollEvents();
             this.paragraphScrollEvents();
+            this.subScrollEvents();
         },
         layout : function() {
             this.$win = $(window);
@@ -291,6 +292,47 @@ $(document).ready(function() {
                     TweenMax.to($paragraph7, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
                     toggle7 = false;
                 }
+            });
+        },
+
+        subScrollEvents : function(){
+            var toggle = true;
+            var toggle2 = true;
+            var toggle3 = true;
+            var toggle4 = true;
+            var $sub = $('#section-3 .area .area-1 .subtitle span');
+            var $sub2 = $('#section-3 .area .area-2 .subtitle span');
+            var $subtext = $('#section-3 .area .area-1 .subsubtitle span');
+            var $subtext2 = $('#section-3 .area .area-2 .subsubtitle span');
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                setTimeout(function() {
+                    if(height > 3000 && toggle)
+                {
+                    TweenMax.set($sub, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($sub, 1,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle = false;
+                }
+                if(height > 4000 && toggle2)
+                {
+                    TweenMax.set($sub2, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($sub2, 1,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle2 = false;
+                }
+                if(height > 3000 && toggle3)
+                {
+                    TweenMax.set($subtext, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($subtext, 1,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle3 = false;
+                }
+                if(height > 4000 && toggle4)
+                {
+                    TweenMax.set($subtext2, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($subtext2, 1,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle4 = false;
+                }
+                }, 1000);
+                
             });
         }
     };
