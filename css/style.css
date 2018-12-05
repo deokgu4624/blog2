@@ -64,13 +64,16 @@ body{background-color: #eeecea;}
 #section-1 .area span{display:inline-block}
 #section-1 .area .name{font-family: 'Pinyon Script', cursive;font-size: 40px;font-weight: 300; text-align: center; margin-top: 180px;}
 #section-2 .area{font-size: 20px; line-height:40px;}
+#section-2 .area span{display:inline-block; opacity: 0;}
 #section-3 .area{font-size: 20px; line-height:40px;}
+#section-3 .area span{display:inline-block; opacity: 0;}
+#section-4 .area span{display:inline-block; opacity: 0;}
 .content #section-1{height:820px;}
 .content #section-2{height:2200px;}
 .content #section-3{height:2400px;}
-.content #section-4{height:3100px;}
+.content #section-4{height:3100px; margin-top:200px;}
 .content .section .area .title{font-size: 60px;text-align: center;margin-bottom:50px;}
-.linesection{width:100%; height: 150px; margin: 0 auto;}
+.linesection{width:100%; height: 150px; margin: 0 auto;margin-bottom:30px;}
 .line-1{background-color: black; width: 1px; height: 0px; margin: 0 auto;}
 .line-2{background-color: black; width: 1px; height: 0px; margin: 0 auto;}
 .line-3{background-color: black; width: 1px; height: 0px; margin: 0 auto;}
@@ -81,15 +84,17 @@ body{background-color: #eeecea;}
 #section-2 .parralax-img:nth-of-type(2){position:absolute; width: 1000px; z-index: -1;top: 1800px; left: -400px}
 #section-2 .parralax-img:nth-of-type(3){position:absolute; width: 800px; z-index: -1;top: 2400px; right: -400px}
 #section-3 .area-1 .parralax-img{position:absolute; width: 500px; z-index: -1;}
-#section-3 .area-2 .parralax-img{position:relative; width: 500px;top:400px; left:428px;z-index: -1;}
-.word{}
+#section-3 .area-2 .parralax-img{position:relative; width: 500px;top:400px; left:428px; z-index: -1;}
 .area-1 .subtitle{position: relative; top: 100px; left: 400px; font-size: 60px; font-family: 'Pinyon Script', cursive;}
 .area-1 .subsubtitle{position: relative; top: 100px; left: 400px; width: 520px;}
 .area-1 .text-area{position: relative; top: 410px;}
 .area-2 .subtitle{position: relative; top: 100px; font-size: 60px;font-family: 'Pinyon Script', cursive;}
 .area-2 .subsubtitle{position: relative; top: 100px; width: 520px;}
-.area-2 .text-area{position: relative; top: 420px;}
-
+.area-2 .text-area{position: relative; top: 420px; margin-top: 20px;}
+.area-2 {margin-top: 100px;}
+.cover-1{position: absolute; bottom: 4530px;width: 500px; height: 1000px; background: #eeecea;}
+.cover-2{position: absolute;left:538px; bottom: 3350px;width: 500px; height: 1000px; background: #eeecea;}
+.read-more{border: 1px solid; display: block; text-align: center; margin: 0 auto; width: 150px;}
 #grid{
 	/* max-width:1280px; */
 	width: 100%;

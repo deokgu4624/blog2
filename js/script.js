@@ -14,6 +14,8 @@ $(document).ready(function() {
             this.resetInit();
             this.lineScrollEvents();
             this.textScrollEvents();
+            this.imageScrollEvents();
+            this.paragraphScrollEvents();
         },
         layout : function() {
             this.$win = $(window);
@@ -111,9 +113,11 @@ $(document).ready(function() {
             var toggle = true;
             var toggle2 = true;
             var toggle3 = true;
+            var toggle4 = true;
             var $line1 = $('.line-1');
             var $line2 = $('.line-2');
             var $line3 = $('.line-3');
+            var $line4 = $('.line-4');
             $(window).scroll(function(){
                 var height = $(document).scrollTop();
                 console.log(height);
@@ -125,7 +129,7 @@ $(document).ready(function() {
                     TweenMax.to($line1, 1, {css: {height:150, autoAlpha: 1}, ease: Power4.easeOut});
                     toggle = false;
                 }
-                if(height>3000 && toggle2)
+                if(height>2800 && toggle2)
                 {
                     TweenMax.killTweensOf($line2);
                     $line2.empty();
@@ -141,21 +145,156 @@ $(document).ready(function() {
                     TweenMax.to($line3, 1, {css: {height:150, autoAlpha: 1}, ease: Power4.easeOut});
                     toggle3 = false;
                 }
+                if(height>5200 && toggle4)
+                {
+                    TweenMax.killTweensOf($line4);
+                    $line4.empty();
+                    TweenMax.set($line4, {css: {height:0, autoAlpha: 0}});
+                    TweenMax.to($line4, 1, {css: {height:150, autoAlpha: 1}, ease: Power4.easeOut});
+                    toggle4 = false;
+                }
             });
         },
 
         textScrollEvents : function() {
-
-
+            var toggle = true;
+            var toggle2 = true;
+            var toggle3 = true;
             var $word = $('.word-1').find('span');
-            TweenMax.set($word, {css: {y:100,autoAlpha: 0}});
+            TweenMax.set($word, {css: {y:80,autoAlpha: 0}});
             setTimeout(function(){
                 TweenMax.staggerTo($word, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
             }, 1000);
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                if(height > 600 && toggle)
+                {
+                    var $word2 = $('#section-2 .title span:eq(0), #section-2 .title span:eq(3)');
+                    TweenMax.set($word2, {css: {y:10,autoAlpha: 0}});
+                    TweenMax.staggerTo($word2, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+
+
+                    var $word3 = $('#section-2 .title span:eq(1), #section-2 .title span:eq(2), #section-2 .title span:eq(4)');
+                    TweenMax.set($word3, {css: {y:-10,autoAlpha: 0}});
+                    TweenMax.staggerTo($word3, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+                    //TweenMax.to($word, 2, {css: {y:0,autoAlpha: 1}, ease: Back.easeInOut, delay:2});
+                    toggle = false;
+                }
+                if(height > 2800 && toggle2)
+                {
+                    var $word2 = $('#section-3 .title span:eq(0), #section-3 .title span:eq(3),#section-3 .title span:eq(5)');
+                    TweenMax.set($word2, {css: {y:10,autoAlpha: 0}});
+                    TweenMax.staggerTo($word2, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+
+
+                    var $word3 = $('#section-3 .title span:eq(1), #section-3 .title span:eq(2), #section-3 .title span:eq(4)');
+                    TweenMax.set($word3, {css: {y:-10,autoAlpha: 0}});
+                    TweenMax.staggerTo($word3, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+                    //TweenMax.to($word, 2, {css: {y:0,autoAlpha: 1}, ease: Back.easeInOut, delay:2});
+                    toggle2 = false;
+                }
+                if(height > 5200 && toggle3)
+                {
+                    var $word2 = $('#section-4 .title span:eq(0), #section-4 .title span:eq(3),#section-4 .title span:eq(5)');
+                    TweenMax.set($word2, {css: {y:10,autoAlpha: 0}});
+                    TweenMax.staggerTo($word2, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+
+
+                    var $word3 = $('#section-4 .title span:eq(1), #section-4 .title span:eq(2), #section-4 .title span:eq(4), #section-4 .title span:eq(6)');
+                    TweenMax.set($word3, {css: {y:-10,autoAlpha: 0}});
+                    TweenMax.staggerTo($word3, 2, {css: {y:0, autoAlpha:1}, ease: Power3.easeOut}, 0.2);
+                    //TweenMax.to($word, 2, {css: {y:0,autoAlpha: 1}, ease: Back.easeInOut, delay:2});
+                    toggle3 = false;
+                }
+            });
+        },
+
+        imageScrollEvents : function(){
+            var toggle = true;
+            var toggle2 = true;
+            var $cover = $('.cover-1');
+            var $cover2 = $('.cover-2');
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                if(height > 3000 && toggle)
+                {
+                    TweenMax.set($cover, {css: {width:500}});
+                    TweenMax.to($cover, 1,{css: {width:0}, ease: Power4.easeOut});
+                    toggle = false;
+                }
+                if(height > 4000 && toggle2)
+                {
+                    TweenMax.set($cover2, {css: {width:500}});
+                    TweenMax.to($cover2, 1,{css: {width:0}, ease: Power4.easeOut});
+                    toggle2 = false;
+                }
+            });
+        },
+
+        paragraphScrollEvents : function(){
+            var toggle = true;
+            var toggle2 = true;
+            var toggle3 = true;
+            var toggle4 = true;
+            var toggle5 = true;
+            var toggle6 = true;
+            var toggle7 = true;
+            var $paragraph = $('#section-2 .area .paragraph span:eq(0)');
+            var $paragraph2 = $('#section-2 .area .paragraph span:eq(1)');
+            var $paragraph3 = $('#section-2 .area .paragraph span:eq(2)');
+            var $paragraph4 = $('#section-2 .area .paragraph span:eq(3)');
+            var $paragraph5 = $('#section-2 .area .paragraph span:eq(4)');
+            var $paragraph6 = $('#section-3 .area .area-1 .text-area span');
+            var $paragraph7 = $('#section-3 .area .area-2 .text-area span');
             
-            //TweenMax.to($word, 2, {css: {y:0,autoAlpha: 1}, ease: Back.easeInOut, delay:2});
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                if(height > 700 && toggle)
+                {
+                    TweenMax.set($paragraph, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle = false;
+                }
+                if(height > 1000 && toggle2)
+                {
+                    TweenMax.set($paragraph2, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph2, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle2 = false;
+                }
+                if(height > 1500 && toggle3)
+                {
+                    TweenMax.set($paragraph3, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph3, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle3 = false;
+                }
+                if(height > 2000 && toggle4)
+                {
+                    TweenMax.set($paragraph4, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph4, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle4 = false;
+                }
+                if(height > 2300 && toggle5)
+                {
+                    TweenMax.set($paragraph5, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph5, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle5 = false;
+                }
+                if(height > 3500 && toggle6)
+                {
+                    TweenMax.set($paragraph6, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph6, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle6 = false;
+                }
+                if(height > 4500 && toggle7)
+                {
+                    TweenMax.set($paragraph7, {css: {y:30,autoAlpha:0}});
+                    TweenMax.to($paragraph7, 2,{css: {y:0,autoAlpha:1}, ease: Power4.easeOut});
+                    toggle7 = false;
+                }
+            });
         }
     };
+    
     Menu.init();
 });
 })(jQuery);
